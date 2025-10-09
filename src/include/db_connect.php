@@ -18,9 +18,10 @@ if ($conn->connect_error) {
 }
 else{
 ?>
-<div class="connection-status">
+<!-- <div class="connection-status">
 Connected successfully
-</div>
+</div> -->
+<div></div>
 <?php
 
 }

@@ -29,26 +29,7 @@ $user_id = $_SESSION['user_id'];
 			<button type="submit">Submit Feedback</button>
 		</form>
 	</div>
-	<?php
-	$feedback_query = "SELECT f.*, COUNT(L.id) AS like_count FROM feedback f LEFT JOIN likes L ON f.id=L.feedback_id GROUP BY f.id ORDER BY f.created_at DESC";
-	$result = $conn->query($feedback_query);
-	if ($conn){
-		return;
-	}
-	if($result->num_rows > 0) {
-		while($row = $result->fetch_assoc()) {
-			?>
-			<div class='feedback-card'>
-				<strong><?php echo($row["name"]);?></strong>
-				<br>
-			</div>
-			<?php
-		}
-	}else {
-		echo "No feedback yet.";
-	}
-
-	?>
+	
 
 
 </body>
